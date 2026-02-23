@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <i class="fas fa-language"></i> 
+            Language Translator
+        </h1>
+        
+        <div class="translation-controls">
+            <!-- Source Language -->
+            <div class="language-selector">
+                <label for="sourceLang">From:</label>
+                <select id="sourceLang" class="language-select">
+                    <option value="auto">Auto Detect</option>
+                </select>
+            </div>
+
+            <!-- Swap Button -->
+            <button class="swap-btn" id="swapLangs" title="Swap languages">
+                <i class="fas fa-exchange-alt"></i>
+            </button>
+
+            <!-- Target Language -->
+            <div class="language-selector">
+                <label for="targetLang">To:</label>
+                <select id="targetLang" class="language-select">
+                    <!-- Languages will be populated by JavaScript -->
+                </select>
+            </div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <div class="text-box">
+                <textarea 
+                    id="inputText" 
+                    placeholder="Enter text to translate..."
+                    rows="5"
+                ></textarea>
+                <div class="text-box-footer">
+                    <span class="char-count" id="charCount">0 characters</span>
+                    <button class="icon-btn" id="clearInput" title="Clear text">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Translate Button -->
+            <button class="translate-btn" id="translateBtn">
+                <i class="fas fa-arrow-right"></i>
+                <span>Translate</span>
+            </button>
+
+            <!-- Output Section -->
+            <div class="text-box output-box">
+                <div class="output-header">
+                    <span class="output-label">
+                        <i class="fas fa-globe"></i>
+                        Translation
+                    </span>
+                    <div class="output-actions">
+                        <button class="icon-btn" id="copyBtn" title="Copy to clipboard">
+                            <i class="far fa-copy"></i>
+                        </button>
+                        <button class="icon-btn" id="speakBtn" title="Listen to translation">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="outputText" class="output-text">
+                    Translation will appear here...
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading-overlay" style="display: none;">
+            <div class="loader-container">
+                <div class="loader"></div>
+                <p>Translating...</p>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error" class="error-message" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

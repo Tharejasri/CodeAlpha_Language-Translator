@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+*.log
+instance/
+*.db
+
+# Flask
+instance/
+.flaskenv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+backend/__pycache__/
+backend/app/__pycache__/
+*.pyc
+dist/
+build/
+
+# Virtual Environment
+backend/venv/
+backend/env/
+backend/Scripts/
+backend/Lib/
+backend/Include/
+backend/pip-wheel-metadata/
